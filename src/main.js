@@ -1,14 +1,16 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-import {BootstrapVue, IconsPlugin} from `BootstrapVue`
+import { createApp } from "vue";
+import "./style.css";
+import App from "./App.vue";
+import Vue from "vue";
+import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 
+// Import Bootstrap and BootstrapVue CSS files (order is important)
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
-
-createApp(App).mount('#app')
+// Make BootstrapVue available throughout your project
+Vue.use(BootstrapVue);
+// Optionally install the BootstrapVue icon components plugin
+//
+Vue.use(IconsPlugin);
+createApp(App).mount("#app");
